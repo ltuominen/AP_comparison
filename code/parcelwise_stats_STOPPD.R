@@ -89,7 +89,7 @@ for (hemi in c('lh', 'rh')){
 df <- data.frame(group_difference)
 names(df) <- c('parcel','t-value', 'p-value')
 file=paste0(base, '/data/STOPPD/parcelwise_groupdifference.csv')
-write.csv(df, file=file)
+write.csv(df, file=file, row.names = FALSE)
 
 
 # pre-post only in OLZ group 
@@ -122,4 +122,4 @@ for (hemi in c('lh', 'rh')){
 df <- data.frame(within_group)
 names(df) <- c('parcel','t-value', 'p-value')
 file=paste0(base, '/data/STOPPD/parcelwise_withingroup.csv')
-write.csv(df, file=file)
+write.csv(df, file=file, row.names = FALSE)
