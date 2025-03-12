@@ -86,6 +86,8 @@ for (hemi in c('lh', 'rh')){
   }
     
 }
+
+
 df <- data.frame(group_difference)
 names(df) <- c('parcel','t-value', 'p-value')
 file=paste0(base, '/data/STOPPD/parcelwise_groupdifference.csv')
@@ -102,24 +104,31 @@ model <- lmer(lh_MeanThickness_thickness ~ time + sex + age +
               data = dat_OLZ)
 m <- summary(model)
 
-within_group <- matrix(nrow=2*length(parcels), ncol=3)
+within_group <- matrix(nrow=2*length(parcels), ncol=8)
 # group difference 
 i=1
 for (hemi in c('lh', 'rh')){
   for (parcel in parcels){
     y=paste(hemi, parcel, sep='_')
-    f <- reformulate(termlabels = c("time + age + sex + (1 | STUDYID) + (1 | site)"),  response = y )
-    m <- summary(lmer(f, data=dat_OLZ, , control = control))
+    f <- reformulate(termlabels = c("time", "age", "sex", "(1 | STUDYID)", "(1 | site)"), response = y)
+    m <- summary(lmer(f, data=dat_OLZ, control = control))
     
-    within_group[i,1] = y
-    within_group[i,2] = m$coefficients[2,4]
-    within_group[i,3] = m$coefficients[2,5]
+    within_group[i,1] <- y
+    within_group[i,2] <- m$coefficients['time','Estimate']
+    within_group[i,3] <- m$coefficients['time','t value']
+    within_group[i,4] <- m$coefficients['time','Pr(>|t|)']
+    
+    within_group[i,5] <- m$sigma
+    within_group[i,6] <- m$coefficients["time", "df"]
+    within_group[i,7] <- as.numeric(within_group[i,2]) / as.numeric(within_group[i,5])
+    J <- 1 - (3 / (4 * as.numeric(within_group[i,6]) - 1))
+    within_group[i,8] <- J * as.numeric(within_group[i,7])
     i=i+1
   }
   
 }
 
 df <- data.frame(within_group)
-names(df) <- c('parcel','t-value', 'p-value')
+names(df) <- c('parcel','estimate', 't-value', 'p-value', 'sigma', 'df', 'cohen_d', 'hedges_g')
 file=paste0(base, '/data/STOPPD/parcelwise_withingroup.csv')
 write.csv(df, file=file, row.names = FALSE)

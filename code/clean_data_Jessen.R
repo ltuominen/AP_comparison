@@ -32,11 +32,25 @@ S2<-S2 %>% mutate(
 S2 <- S2 %>% 
   unite(parcel, c('Hemisphere', 'ROI'))
 
+bN = 56 # N of participants at t1
+fN = 41 # N of participants at t2
+# treating these as independent samples 
+
+
 dat <- merge(S1,S2, by='parcel')
 dat <- dat[,c('parcel', 'SZ_mean_base', 'SZ_SD_base', 'SZ_mean_6weeks', 'SZ_SD_6weeks')]
-dat <- dat %>% mutate(
-  cohen_d = ( ( SZ_mean_6weeks- SZ_mean_base)/ sqrt( (SZ_SD_base^2 + SZ_SD_6weeks^2)/2))
-)
 
-write_csv(dat, paste0(base, '/data/jessen/jessen_cohend.csv'))
+# SD pooled sp = sqrt( ((n1-1)*SD1^2 + (n2 -1)*SD2^2) / (n1+n2-2)
+dat <- dat %>% mutate(
+  sp = sqrt( ((bN-1)*SZ_SD_base^2 + (fN -1)*SZ_SD_6weeks^2) / (bN+fN-2)),
+  J = 1- (3 / (4 * (bN+fN-2) -1))
+  ) %>%
+  mutate(
+    cohen_d = ( ( SZ_mean_6weeks- SZ_mean_base)/ sp)
+  ) %>%
+  mutate(
+    hedges_g = J * cohen_d
+  )
+
+write_csv(dat, paste0(base, '/data/jessen/jessen_effectsize.csv'))
 
