@@ -132,3 +132,11 @@ df <- data.frame(within_group)
 names(df) <- c('parcel','estimate', 't-value', 'p-value', 'sigma', 'df', 'cohen_d', 'hedges_g')
 file=paste0(base, '/data/STOPPD/parcelwise_withingroup.csv')
 write.csv(df, file=file, row.names = FALSE)
+
+
+library(emmeans)
+m <-lmer(f, data=dat_OLZ, control = control)
+emm <- emmeans(m, ~ time)
+eff <- eff_size(emm, sigma = summary(m)$sigma)
+
+

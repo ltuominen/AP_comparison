@@ -6,7 +6,9 @@ S1 = read.csv(paste0(base, '/data/Jessen/Jessen_S1_Cortical_ROIS_at_baseline.csv
 S2 = read.csv(paste0(base, '/data/Jessen/Jessen_S2_Cortical_ROIS_at_six-weeks.csv'))
 S3 =  read.csv(paste0(base, '/data/Jessen/Jessen_S3_ROI_symmetrized_change.csv'))
 
-strsplit(S1['Thickness.SZ..Mean..SD..'], ' ') 
+annot = read.csv(paste0(base, '/annot/atlas-desikankilliany.csv'))
+annot <- annot[annot['structure']=='cortex',]
+annot$parcel<- paste0(annot$hemisphere, '_', annot$label)
 
 # S1 
 S1<-S1 %>% mutate(
@@ -17,7 +19,7 @@ S1<-S1 %>% mutate(
     SZ_SD_base = as.numeric(gsub('\\)', '', gsub('\\(', '', SZ_SD_base)))
   )
 
-S1 <- S1 %>% 
+S1 <- S1 %>% mutate(ROI = tolower(ROI)) %>% 
   unite(parcel, c('Hemisphere', 'ROI'))
 
 # S2
@@ -29,7 +31,7 @@ S2<-S2 %>% mutate(
     SZ_SD_6weeks = as.numeric(gsub('\\)', '', gsub('\\(', '', SZ_SD_6weeks)))
   )
 
-S2 <- S2 %>% 
+S2 <- S2 %>% mutate(ROI = tolower(ROI)) %>% 
   unite(parcel, c('Hemisphere', 'ROI'))
 
 bN = 56 # N of participants at t1
@@ -38,7 +40,9 @@ fN = 41 # N of participants at t2
 
 
 dat <- merge(S1,S2, by='parcel')
+dat <- left_join(annot, dat, by='parcel' )
 dat <- dat[,c('parcel', 'SZ_mean_base', 'SZ_SD_base', 'SZ_mean_6weeks', 'SZ_SD_6weeks')]
+
 
 # SD pooled sp = sqrt( ((n1-1)*SD1^2 + (n2 -1)*SD2^2) / (n1+n2-2)
 dat <- dat %>% mutate(
