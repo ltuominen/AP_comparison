@@ -32,10 +32,12 @@ rh <- rh %>% mutate(
 # merge 
 dat <- merge(lh, rh, by=c('STUDYID', 'timepoint'))
 dat <- dat %>% relocate("STUDYID", "timepoint")  %>% 
-  select(!contains(c("rh.aparc.thickness", "lh.aparc.thickness", "BrainSegVolNotVent","eTIV")))
+  select(!contains(c("rh.aparc.thickness", "lh.aparc.thickness", "lh_MeanThickness_thickness" ,"rh_MeanThickness_thickness" ,"BrainSegVolNotVent","eTIV")))
+
+
 
 # gather means and sd's
-stats <- dat %>% select(!c("STUDYID", "timepoint_num")) %>%
+stats <- dat %>% select(!c("STUDYID")) %>%
   group_by(timepoint) %>%
   summarize(
     across(
@@ -47,12 +49,12 @@ stats <- dat %>% select(!c("STUDYID", "timepoint_num")) %>%
 # reorganize 
 stats <- stats %>% pivot_longer(
   cols = -timepoint,
-  names_to = c("region", "metric"),    
+  names_to = c("parcel", "metric"),    
   names_pattern = "(.*)_(mean|sd)$",   
   values_to = "value"
 ) %>%
   pivot_wider(
-    id_cols      = region,
+    id_cols      = parcel,
     names_from   = c(timepoint, metric),
     values_from  = value
   ) %>%
@@ -63,7 +65,9 @@ stats <- stats %>% pivot_longer(
     sd_PRCL   = PRCL_sd
   )
 
-# calculate cohen's d
+stats <- stats %>% relocate(parcel, mean_PRCL, sd_PRCL, mean_POCL, sd_POCL)
+
+# calculate effect sizes 
 stats <- stats %>% 
   mutate(
   cohen_d = (mean_POCL - mean_PRCL) / 
