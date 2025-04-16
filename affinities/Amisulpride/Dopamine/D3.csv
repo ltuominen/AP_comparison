@@ -1,0 +1,3 @@
+Receptor,UniGene,Test Ligand Name,NCI,Ki (nM),PubChem,ChEBI,Hot Ligand,Species,Source,Reference 
+D3,N/A,Amisulpride,N/A,17,http://www.ncbi.nlm.nih.gov/pccompound?term=71675-85-9,N/A,3H-N-Methylspiperone,HUMAN,CLONED,http://pdsp.med.unc.edu/pdsp.php 
+D3,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&db=unigene&dispmax=100&term=DRD3,Amisulpride,N/A,2.4,http://www.ncbi.nlm.nih.gov/pccompound?term=71675-85-9,N/A,125I-IODOSULPRIDE,HUMAN,CLONED,http://www.ncbi.nlm.nih.gov:80/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=1586393&dopt=Abstract#http://www.ncbi.nlm.nih.gov:80/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=1586393&dopt=Abstract# 

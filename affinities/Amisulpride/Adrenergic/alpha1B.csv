@@ -1,0 +1,2 @@
+Receptor,UniGene,Test Ligand Name,NCI,Ki (nM),PubChem,ChEBI,Hot Ligand,Species,Source,Reference 
+alpha 1B,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&db=unigene&dispmax=100&term=ADRA1B,Amisulpride,N/A,> 10 000.000,http://www.ncbi.nlm.nih.gov/pccompound?term=71675-85-9,N/A,125I-HEAT,HUMAN,CLONED,http://www.ncbi.nlm.nih.gov/pubmed/19337725 

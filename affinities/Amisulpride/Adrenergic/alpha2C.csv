@@ -1,0 +1,3 @@
+Receptor,UniGene,Test Ligand Name,NCI,Ki (nM),PubChem,ChEBI,Hot Ligand,Species,Source,Reference 
+alpha 2C,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&db=unigene&dispmax=100&term=ADRA2C,Amisulpride,N/A, 1 540.000,http://www.ncbi.nlm.nih.gov/pccompound?term=71675-85-9,N/A,125I-Clonidine,HUMAN,CLONED,http://www.ncbi.nlm.nih.gov/pubmed/19337725 
+alpha 2C,N/A,Amisulpride,N/A,992,http://www.ncbi.nlm.nih.gov/pccompound?term=71675-85-9,N/A,3H-RAUWOLSCINE,HUMAN,CLONED,http://pdsp.med.unc.edu/pdsp.php 

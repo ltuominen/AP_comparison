@@ -1,0 +1,7 @@
+Receptor,UniGene,Test Ligand Name,NCI,Ki (nM),PubChem,ChEBI,Hot Ligand,Species,Source,Reference 
+H1,N/A,Norclozapine,N/A,4.467,http://www.ncbi.nlm.nih.gov/pccompound?term=2820,N/A,3H-PYRILAMINE,HUMAN,CLONED,https://link.springer.com/article/10.1007%2Fs00210-011-0704-0 
+H1,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&db=unigene&dispmax=100&term=HRH1,Norclozapine,N/A,3.4,http://www.ncbi.nlm.nih.gov/pccompound?term=2820,N/A,3H-PYRILAMINE,HUMAN,CLONED,http://pdsp.med.unc.edu/pdsp.php 
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,

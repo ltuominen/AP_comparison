@@ -1,0 +1,3 @@
+Receptor,UniGene,Test Ligand Name,NCI,Ki (nM),PubChem,ChEBI,Hot Ligand,Species,Source,Reference 
+D5,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&db=unigene&dispmax=100&term=DRD5,OLANZAPINE,N/A,74,http://www.ncbi.nlm.nih.gov/pccompound?term=132539-06-1,https://www.ebi.ac.uk/chebi/searchId.do?chebiId=134197,3H-SCH23390,HUMAN,CLONED,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=8997630&dopt=Abstract 
+D5,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&db=unigene&dispmax=100&term=DRD5,OLANZAPINE,N/A,90,http://www.ncbi.nlm.nih.gov/pccompound?term=132539-06-1,https://www.ebi.ac.uk/chebi/searchId.do?chebiId=134197,3H-SCH23390,HUMAN,CLONED,http://pdsp.med.unc.edu/pdsp.php 

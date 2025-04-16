@@ -1,0 +1,2 @@
+Receptor,UniGene,Test Ligand Name,NCI,Ki (nM),PubChem,ChEBI,Hot Ligand,Species,Source,Reference 
+M1,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&db=unigene&dispmax=100&term=CHRM1,Norclozapine,N/A,67.6,http://www.ncbi.nlm.nih.gov/pccompound?term=2820,N/A,3H-QNB,HUMAN,CLONED,http://pdsp.med.unc.edu/pdsp.php 

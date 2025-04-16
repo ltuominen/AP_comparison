@@ -1,0 +1,4 @@
+﻿Receptor,UniGene,Test Ligand Name,NCI,Ki (nM),PubChem,ChEBI,Hot Ligand,Species,Source,Reference ,
+alpha 1B,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&db=unigene&dispmax=100&term=ADRA1B,CLOZAPINE,N/A,7,http://www.ncbi.nlm.nih.gov/pccompound?term=5786-21-0,https://www.ebi.ac.uk/chebi/searchId.do?chebiId=102261,125I-HEAT,HUMAN,CLONED,http://pdsp.med.unc.edu/pdsp.php ,
+alpha 1B,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&db=unigene&dispmax=100&term=ADRA1B,CLOZAPINE,N/A,7,http://www.ncbi.nlm.nih.gov/pccompound?term=5786-21-0,https://www.ebi.ac.uk/chebi/searchId.do?chebiId=102261,3H-PRAZOSIN,HUMAN,CLONED,http://ac.els-cdn.com/S0960894X06003465/1-s2.0-S0960894X06003465-main.pdf?_tid=3ed75e86-c34c-11e4-8e61-00000aacb35e&acdnat=1425569476_f036deeb267d3f50cdd53ca871228b68 ,
+,,,,,,,,,,,

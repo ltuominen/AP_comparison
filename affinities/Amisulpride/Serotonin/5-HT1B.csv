@@ -1,0 +1,2 @@
+Receptor,UniGene,Test Ligand Name,NCI,Ki (nM),PubChem,ChEBI,Hot Ligand,Species,Source,Reference 
+5-HT1B,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&db=unigene&dispmax=100&term=HTR1B,Amisulpride,N/A, 1 744.000,http://www.ncbi.nlm.nih.gov/pccompound?term=71675-85-9,N/A,3H-5CT,HUMAN,CLONED,http://www.ncbi.nlm.nih.gov/pubmed/19337725 

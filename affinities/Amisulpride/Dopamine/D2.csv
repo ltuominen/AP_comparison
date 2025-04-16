@@ -1,0 +1,3 @@
+Receptor,UniGene,Test Ligand Name,NCI,Ki (nM),PubChem,ChEBI,Hot Ligand,Species,Source,Reference 
+D2,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&db=unigene&dispmax=100&term=DRD2,Amisulpride,N/A,1.3,http://www.ncbi.nlm.nih.gov/pccompound?term=71675-85-9,N/A,125I-IODOSULPRIDE,HUMAN,CLONED,http://www.ncbi.nlm.nih.gov:80/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=1586393&dopt=Abstract#http://www.ncbi.nlm.nih.gov:80/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=1586393&dopt=Abstract# 
+D2,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&db=unigene&dispmax=100&term=DRD2,Amisulpride,N/A,3,http://www.ncbi.nlm.nih.gov/pccompound?term=71675-85-9,N/A,3H-NMSP,HUMAN,CLONED,http://www.ncbi.nlm.nih.gov/pubmed/19337725 

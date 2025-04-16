@@ -1,0 +1,4 @@
+Receptor,UniGene,Test Ligand Name,NCI,Ki (nM),PubChem,ChEBI,Hot Ligand,Species,Source,Reference 
+D2,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&db=unigene&dispmax=100&term=DRD2,Norclozapine,N/A,115.2,http://www.ncbi.nlm.nih.gov/pccompound?term=2820,N/A,3H-NMSP,HUMAN,CLONED,http://pdsp.med.unc.edu/pdsp.php 
+D2,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&db=unigene&dispmax=100&term=DRD2,Norclozapine,N/A,89,http://www.ncbi.nlm.nih.gov/pccompound?term=2820,N/A,R-SAT,HUMAN,CLONED,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=pubmed&dopt=Abstract&list_uids=16135699&query_hl=4 
+D2,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&db=unigene&dispmax=100&term=DRD2,Norclozapine,N/A,100,http://www.ncbi.nlm.nih.gov/pccompound?term=2820,N/A,UNDEFINED,HUMAN,CLONED,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=9577836&dopt=Abstract 

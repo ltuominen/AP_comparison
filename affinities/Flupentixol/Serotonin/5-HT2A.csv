@@ -1,0 +1,2 @@
+Receptor,UniGene,Test Ligand Name,NCI,Ki (nM),PubChem,ChEBI,Hot Ligand,Species,Source,Reference 
+5-HT2A,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&db=unigene&dispmax=100&term=HTR2A,CIS-FLUPENTHIXOL,N/A,87.5,http://www.ncbi.nlm.nih.gov/pccompound?term=53772-82-0,N/A,125I-LSD,HUMAN,FR. CORTEX,ELLIOT & KENT  1989 

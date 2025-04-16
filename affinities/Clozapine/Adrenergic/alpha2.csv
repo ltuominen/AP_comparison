@@ -1,0 +1,7 @@
+﻿Receptor,UniGene,Test Ligand Name,NCI,Ki (nM),PubChem,ChEBI,Hot Ligand,Species,Source,Reference ,,,
+alpha 2,N/A,CLOZAPINE,N/A,160,http://www.ncbi.nlm.nih.gov/pccompound?term=5786-21-0,https://www.ebi.ac.uk/chebi/searchId.do?chebiId=102261,3H-PRAZOSIN,HUMAN,FR. CORTEX,http://www.ncbi.nlm.nih.gov:80/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=6149136&dopt=Abstract#http://www.ncbi.nlm.nih.gov:80/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=6149136&dopt=Abstract# ,,,
+alpha 2,N/A,CLOZAPINE,N/A,15,http://www.ncbi.nlm.nih.gov/pccompound?term=5786-21-0,https://www.ebi.ac.uk/chebi/searchId.do?chebiId=102261,3H-RAUWOLSCINE,HUMAN,BRAIN,http://www.ncbi.nlm.nih.gov:80/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=11132243&dopt=Abstract ,,,
+alpha 2,N/A,CLOZAPINE,N/A,161.29,http://www.ncbi.nlm.nih.gov/pccompound?term=5786-21-0,https://www.ebi.ac.uk/chebi/searchId.do?chebiId=102261,UNDEFINED,HUMAN,BRAIN,http://www.ncbi.nlm.nih.gov:80/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=2904784&dopt=Abstract#http://www.ncbi.nlm.nih.gov:80/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=2904784&dopt=Abstract# ,,,
+alpha 2,N/A,CLOZAPINE,N/A,33.113,http://www.ncbi.nlm.nih.gov/pccompound?term=5786-21-0,https://www.ebi.ac.uk/chebi/searchId.do?chebiId=102261,3H-RAUWOLSCINE,HUMAN,CLONED,https://www.sciencedirect.com/science/article/pii/S0014299901011888?via%3Dihub ,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,

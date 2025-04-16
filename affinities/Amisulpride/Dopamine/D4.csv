@@ -1,0 +1,5 @@
+Receptor,UniGene,Test Ligand Name,NCI,Ki (nM),PubChem,ChEBI,Hot Ligand,Species,Source,Reference ,
+D4,N/A,Amisulpride,N/A, 1 591.000,http://www.ncbi.nlm.nih.gov/pccompound?term=71675-85-9,N/A,3H-N-Methylspiperone,HUMAN,CLONED,http://pdsp.med.unc.edu/pdsp.php ,
+D4,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&db=unigene&dispmax=100&term=DRD4,Amisulpride,N/A,Ê2 369.000,http://www.ncbi.nlm.nih.gov/pccompound?term=71675-85-9,N/A,3H-NMSP,HUMAN,CLONED,http://www.ncbi.nlm.nih.gov/pubmed/19337725Ê,
+,,,,,,,,,,,
+,,,,,,,,,,,

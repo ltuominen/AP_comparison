@@ -1,0 +1,2 @@
+Receptor,UniGene,Test Ligand Name,NCI,Ki (nM),PubChem,ChEBI,Hot Ligand,Species,Source,Reference 
+5-HT1A,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&db=unigene&dispmax=100&term=HTR1A,Norclozapine,N/A,13.9,http://www.ncbi.nlm.nih.gov/pccompound?term=2820,N/A,3H-8-OH-DPAT,HUMAN,CLONED,http://pdsp.med.unc.edu/pdsp.php 

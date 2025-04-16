@@ -1,0 +1,5 @@
+Receptor,UniGene,Test Ligand Name,NCI,Ki (nM),PubChem,ChEBI,Hot Ligand,Species,Source,Reference 
+alpha 1,N/A,RISPERIDONE,N/A,2.7,http://www.ncbi.nlm.nih.gov/pccompound?term=106266-06-2,https://www.ebi.ac.uk/chebi/searchId.do?chebiId=107714,3H-PRAZOSIN,HUMAN,BRAIN,http://www.ncbi.nlm.nih.gov:80/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=11132243&dopt=Abstract 
+alpha 1,N/A,RISPERIDONE,N/A,13.804,http://www.ncbi.nlm.nih.gov/pccompound?term=106266-06-2,https://www.ebi.ac.uk/chebi/searchId.do?chebiId=107714,3H-PRAZOSIN,HUMAN,CLONED,https://journals.prous.com/journals/servlet/xmlxsl/pk_journals.xml_summaryn_pr?p_JournalId=6&p_RefId=908643 
+alpha 1,N/A,RISPERIDONE,N/A,1.4,http://www.ncbi.nlm.nih.gov/pccompound?term=106266-06-2,https://www.ebi.ac.uk/chebi/searchId.do?chebiId=107714,3H-PRAZOSIN,HUMAN,CLONED,Hirose  Tsuyoshi.  et. al  2005 
+alpha 1,N/A,RISPERIDONE,N/A,1.38,http://www.ncbi.nlm.nih.gov/pccompound?term=106266-06-2,https://www.ebi.ac.uk/chebi/searchId.do?chebiId=107714,3H-PRAZOSIN,HUMAN,CLONED,https://www.sciencedirect.com/science/article/pii/S0014299901011888?via%3Dihub 

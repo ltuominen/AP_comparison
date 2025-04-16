@@ -1,0 +1,2 @@
+Receptor,UniGene,Test Ligand Name,NCI,Ki (nM),PubChem,ChEBI,Hot Ligand,Species,Source,Reference 
+D5,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&db=unigene&dispmax=100&term=DRD5,CIS-FLUPENTHIXOL,N/A,8,http://www.ncbi.nlm.nih.gov/pccompound?term=53772-82-0,N/A,3H-SCH23390,HUMAN,CLONED,http://www.ncbi.nlm.nih.gov:80/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=1826762&dopt=Abstract#http://www.ncbi.nlm.nih.gov:80/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=1826762&dopt=Abstract# 

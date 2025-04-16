@@ -1,0 +1,2 @@
+Receptor,UniGene,Test Ligand Name,NCI,Ki (nM),PubChem,ChEBI,Hot Ligand,Species,Source,Reference 
+5-HT1A,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Search&db=unigene&dispmax=100&term=HTR1A,CIS-FLUPENTHIXOL,N/A, 8 028.000,http://www.ncbi.nlm.nih.gov/pccompound?term=53772-82-0,N/A,3H-8-OH-DPAT,HUMAN,CLONED,http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=9686407&dopt=Abstract 
