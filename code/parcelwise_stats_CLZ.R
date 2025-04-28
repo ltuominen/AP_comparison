@@ -32,9 +32,8 @@ rh <- rh %>% mutate(
 # merge 
 dat <- merge(lh, rh, by=c('STUDYID', 'timepoint'))
 dat <- dat %>% relocate("STUDYID", "timepoint")  %>% 
-  select(!contains(c("rh.aparc.thickness", "lh.aparc.thickness", "lh_MeanThickness_thickness" ,"rh_MeanThickness_thickness" ,"BrainSegVolNotVent","eTIV")))
-
-
+  select(!contains(c("rh.aparc.thickness", "lh.aparc.thickness", "lh_MeanThickness_thickness" ,
+                     "rh_MeanThickness_thickness" ,"BrainSegVolNotVent","eTIV")))
 
 # gather means and sd's
 stats <- dat %>% select(!c("STUDYID")) %>%
