@@ -2,8 +2,8 @@ library(tidyverse)
 
 # load data
 base = '/Users/laurituominen/Documents/Research/AP_cortical_thickness_v2'
-lh_file = paste0(base, '/data/CLZ44/stats/lh_aparc_stats.txt')
-rh_file = paste0(base, '/data/CLZ44/stats/rh_aparc_stats.txt')
+lh_file = paste0(base, '/data/Clozapine/stats/lh_aparc_stats.txt')
+rh_file = paste0(base, '/data/Clozapine/stats/rh_aparc_stats.txt')
 
 lh= read_delim(lh_file, delim='\t')
 rh = read_delim(rh_file, delim='\t')
@@ -76,6 +76,6 @@ stats <- stats %>%
     hedges_g =  cohen_d * (1 - 3 / (4 * 84 - 9))
   )
 
-file=paste0(base, '/data/CLZ44/stats/parcelwise_effectsize.csv')
+file=paste0(base, '/data/Clozapine/Clozapine_parcelwise.csv')
 write.csv(stats, file=file, row.names = FALSE)
 

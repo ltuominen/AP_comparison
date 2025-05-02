@@ -1,7 +1,7 @@
 library(tidyverse)
 library(lme4)
 library(lmerTest)
-
+library(fs)
 
 '''
 primary analysis associated with change in gray matter structure (cortical thickness).Time was measured (interval between scans,in days),and a treatment-group by time interaction was modeled,
@@ -25,42 +25,42 @@ model <- lmer(grayMatter ~ time * treatment + sex + age +
 summary(model)
 '''
 
-
-# load data
-base = '/Users/laurituominen/Documents/Research/AP_cortical_thickness_v2'
-dat_file = paste0(base, '/data/STOPPD/STOPPD_merged.csv')
-
-dat <- read.csv(dat_file)
-
-# define as factors 
-dat$sex <- as.factor(dat$sex)
-dat$randomization <- as.factor(dat$randomization)
-dat$site_x <- as.factor(dat$site)
-dat$STUDYID <- as.factor(dat$STUDYID)
-dat$time <- as.numeric(dat$time)
-dat$age <- as.numeric(dat$age)
-
-
-# parcels 
-parcels <- c("bankssts", "caudalanteriorcingulate", "caudalmiddlefrontal", "cuneus",
-             "entorhinal", "fusiform", "inferiorparietal", "inferiortemporal",
-             "isthmuscingulate", "lateraloccipital", "lateralorbitofrontal", "lingual",
-             "medialorbitofrontal", "middletemporal", "parahippocampal", "paracentral",
-             "parsopercularis", "parsorbitalis", "parstriangularis", "pericalcarine",
-             "postcentral", "posteriorcingulate", "precentral", "precuneus",
-             "rostralanteriorcingulate", "rostralmiddlefrontal", "superiorfrontal",
-             "superiorparietal", "superiortemporal", "supramarginal", "frontalpole",
-             "temporalpole", "transversetemporal", "insula") %>%
-  paste0("_thickness")
-
-
-# sanity test -- Ok!
-model <- lmer(1+ lh_MeanThickness_thickness ~ time * randomization + sex + age + 
-                (1 | STUDYID) + (1 | site), 
-              data = dat)
-m <- summary(model)
-
-control = lmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 2e5))
+  
+  # load data
+  base = '/Users/laurituominen/Documents/Research/AP_cortical_thickness_v2'
+  dat_file = paste0(base, '/data/Olanzapine/STOPPD_merged.csv')
+  
+  dat <- read.csv(dat_file)
+  
+  # define as factors 
+  dat$sex <- as.factor(dat$sex)
+  dat$randomization <- as.factor(dat$randomization)
+  dat$site_x <- as.factor(dat$site)
+  dat$STUDYID <- as.factor(dat$STUDYID)
+  dat$time <- as.numeric(dat$time)
+  dat$age <- as.numeric(dat$age)
+  
+  
+  # parcels 
+  parcels <- c("bankssts", "caudalanteriorcingulate", "caudalmiddlefrontal", "cuneus",
+               "entorhinal", "fusiform", "inferiorparietal", "inferiortemporal",
+               "isthmuscingulate", "lateraloccipital", "lateralorbitofrontal", "lingual",
+               "medialorbitofrontal", "middletemporal", "parahippocampal", "paracentral",
+               "parsopercularis", "parsorbitalis", "parstriangularis", "pericalcarine",
+               "postcentral", "posteriorcingulate", "precentral", "precuneus",
+               "rostralanteriorcingulate", "rostralmiddlefrontal", "superiorfrontal",
+               "superiorparietal", "superiortemporal", "supramarginal", "frontalpole",
+               "temporalpole", "transversetemporal", "insula") %>%
+    paste0("_thickness")
+  
+  
+  # sanity test -- Ok!
+  model <- lmer(1+ lh_MeanThickness_thickness ~ time * randomization + sex + age + 
+                  (1 | STUDYID) + (1 | site), 
+                data = dat)
+  m <- summary(model)
+  
+  control = lmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 2e5))
 
 
 group_difference <- matrix(nrow=2*length(parcels), ncol=3)
@@ -83,7 +83,7 @@ for (hemi in c('lh', 'rh')){
 
 df <- data.frame(group_difference)
 names(df) <- c('parcel','t-value', 'p-value')
-file=paste0(base, '/data/STOPPD/parcelwise_groupdifference.csv')
+file=paste0(base, '/data/Olanzapine/parcelwise_groupdifference.csv')
 write.csv(df, file=file, row.names = FALSE)
 
 
@@ -123,7 +123,7 @@ for (hemi in c('lh', 'rh')){
 
 df <- data.frame(within_group)
 names(df) <- c('parcel','estimate', 't-value', 'p-value', 'sigma', 'df', 'cohen_d', 'hedges_g')
-file=paste0(base, '/data/STOPPD/parcelwise_withingroup.csv')
+file=paste0(base, '/data/Olanzapine/Olanzapine_parcelwise.csv')
 write.csv(df, file=file, row.names = FALSE)
 
 

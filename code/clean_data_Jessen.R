@@ -1,10 +1,11 @@
 library('tidyverse')
+library('fs')
 
 # load data
 base = '/Users/laurituominen/Documents/Research/AP_cortical_thickness_v2'
-S1 = read.csv(paste0(base, '/data/Jessen/Jessen_S1_Cortical_ROIS_at_baseline.csv'))
-S2 = read.csv(paste0(base, '/data/Jessen/Jessen_S2_Cortical_ROIS_at_six-weeks.csv'))
-S3 =  read.csv(paste0(base, '/data/Jessen/Jessen_S3_ROI_symmetrized_change.csv'))
+S1 = read.csv(paste0(base, '/data/Amisulpride/Jessen_S1_Cortical_ROIS_at_baseline.csv'))
+S2 = read.csv(paste0(base, '/data/Amisulpride/Jessen_S2_Cortical_ROIS_at_six-weeks.csv'))
+S3 =  read.csv(paste0(base, '/data/Amisulpride/Jessen_S3_ROI_symmetrized_change.csv'))
 
 annot = read.csv(paste0(base, '/annot/atlas-desikankilliany.csv'))
 annot <- annot[annot['structure']=='cortex',]
@@ -42,7 +43,8 @@ fN = 41 # N of participants at t2
 dat <- merge(S1,S2, by='parcel')
 dat <- left_join(annot, dat, by='parcel' )
 dat <- dat[,c('parcel', 'SZ_mean_base', 'SZ_SD_base', 'SZ_mean_6weeks', 'SZ_SD_6weeks')]
-
+dat$parcel <- gsub('L_', 'lh_', dat$parcel )
+dat$parcel <- gsub('R_', 'rh_', dat$parcel )
 
 # SD pooled sp = sqrt( ((n1-1)*SD1^2 + (n2 -1)*SD2^2) / (n1+n2-2)
 dat <- dat %>% mutate(
@@ -56,5 +58,5 @@ dat <- dat %>% mutate(
     hedges_g = J * cohen_d
   )
 
-write_csv(dat, paste0(base, '/data/jessen/jessen_effectsize.csv'))
-
+file=path(base, "data", "Amisulpride", "Amisulpride_parcelwise.csv")
+write.csv(dat, file=file, row.names = FALSE)
